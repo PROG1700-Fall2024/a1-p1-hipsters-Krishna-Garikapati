@@ -26,13 +26,12 @@ def main():
     costofrecords=float(input("Enter cost of records purchased: $"))
     deliveryCharge=15
     TotalDelCharge=Distance*deliveryCharge
-    print("Purchase summary for", customername, "is")
-    print("Deivery cost $", TotalDelCharge)
+    print("\nPurchase summary for", customername, "is")
+    print("Deivery cost ${0:.2f}".format(TotalDelCharge))
     Salestax=(14/100)*costofrecords
     purchasecost=costofrecords+Salestax
-    totalpurchasecost=round(purchasecost,2)
-    print("Purchase cost $", totalpurchasecost)
-    Totalcost=(totalpurchasecost+TotalDelCharge)
-    print("Total cost $",Totalcost)
+    print("Purchase cost ${0:.2f}".format(purchasecost))
+    Totalcost=(purchasecost+TotalDelCharge)
+    print("Total cost ${0:.2f}".format(Totalcost))
 
 main()
