@@ -21,17 +21,18 @@ Assignment # 1
 #print the total cost
 
 def main():
-    customername=input("Enter customer name:")
+    CustomerName=input("Enter customer name:")
     Distance=float(input("Enter the distance for destination in km:"))
-    costofrecords=float(input("Enter cost of records purchased: $"))
-    deliveryCharge=15
-    TotalDelCharge=Distance*deliveryCharge
-    print("\nPurchase summary for", customername, "is")
+    RecordsCost=float(input("Enter cost of records purchased: $"))
+    DeliveryCharge=15
+    TotalDelCharge=Distance*DeliveryCharge
+    print("\nPurchase summary for", CustomerName, "is")
     print("Deivery cost ${0:.2f}".format(TotalDelCharge))
-    Salestax=(14/100)*costofrecords
-    purchasecost=costofrecords+Salestax
-    print("Purchase cost ${0:.2f}".format(purchasecost))
-    Totalcost=(purchasecost+TotalDelCharge)
-    print("Total cost ${0:.2f}".format(Totalcost))
+    #two have 2 decimal values format function is used.
+    SalesTax=(14/100)*RecordsCost
+    PurchaseCost=RecordsCost+SalesTax
+    print("Purchase cost ${0:.2f}".format(PurchaseCost))
+    TotalCost=(PurchaseCost+TotalDelCharge)
+    print("Total cost ${0:.2f}".format(TotalCost))
 
 main()
